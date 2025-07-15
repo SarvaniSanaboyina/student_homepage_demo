@@ -1,0 +1,123 @@
+/* Main container centers the grid */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f8fa;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 16px 0 rgba(44, 62, 80, 0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 4px 24px 0 rgba(44, 62, 80, 0.16);
+}
+
+/* Card color accents */
+.card-ai-tutor {
+  background: #fff8e1;
+  grid-column: span 2;
+}
+.card-self-learn {
+  background: #f1fff1;
+}
+.card-revision {
+  background: #eaf3ff;
+}
+.card-ask-vin {
+  background: #fff2f2;
+}
+.card-advanced-learning {
+  background: #f3f2fa;
+}
+.card-portfolio {
+  background: #eafaf7;
+}
+.card-homework-formats {
+  background: #fffbe7;
+}
+.card-experiential-learning {
+  background: #f2f7ff;
+}
+
+.icon-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.icon {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+}
+.card-desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
+  flex: 1;
+}
+.learn-more {
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s;
+  align-self: flex-end;
+}
+.learn-more:hover {
+  color: #6c63ff;
+}
+.arrow {
+  font-size: 1.1em;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-ai-tutor {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .main-container {
+    padding: 0.5rem;
+  }
+  .card-ai-tutor {
+    grid-column: span 1;
+  }
+}
